@@ -9,7 +9,6 @@
             <div class="row">
                 <div class="col-3">
                     <img src="{{asset('storage/'. $project->image)}}" alt="{{$project->title}}" class="img-fluid mb-3">
-                    <div><strong>Linguaggio:</strong> {{$project->language}}</div>
                     <div><strong>Framework:</strong> {{$project->framework}}</div>
                     <div class="mt-2"><strong>Creato il:</strong> {{$project->created_at}}</div>
                     <div><strong>Ultima modifica:</strong> {{$project->updated_at}}</div>

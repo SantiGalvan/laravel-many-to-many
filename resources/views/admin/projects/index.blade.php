@@ -20,7 +20,6 @@
                 <th scope="col">#</th>
                 <th scope="col">Titolo</th>
                 <th scope="col">Tipo</th>
-                <th scope="col">Linguaggio</th>
                 <th scope="col">Framework</th>
                 <th scope="col">Creato il</th>
                 <th scope="col">Ultima modifica</th>
@@ -39,7 +38,6 @@
                         Nessuno
                       @endif
                     </td>
-                    <td>{{$project->language}}</td>
                     <td>{{$project->framework}}</td>
                     <td>{{$project->getFormattedDate('created_at', 'd-m-Y H:i:s ')}}</td>
                     <td>{{$project->getFormattedDate('updated_at', 'd-m-Y H:i:s ')}}</td>
@@ -57,7 +55,7 @@
                   </tr>
                 @empty
                   <tr>
-                    <th colspan="8">
+                    <th colspan="7">
                         <h3>Al momento non ci sono progetti</h3>
                     </th>
                 </tr>  

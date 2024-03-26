@@ -42,7 +42,6 @@ class ProjectController extends Controller
         $request->validate(
             [
                 'title' => 'required|unique:projects|string|min:5|max:50',
-                'language' => 'required|string',
                 'framework' => 'nullable|string',
                 'image' => 'nullable|image|mimes:png,jpg,jpeg',
                 'description' => 'nullable|string',
@@ -54,7 +53,6 @@ class ProjectController extends Controller
                 'title.max' => 'Il titolo non può essere più lungo di :max caratteri',
                 'title.unique' => 'Titolo già inserito, riprova con un altro titolo',
                 'image.image' => 'Il file inserito non è un\'immagine',
-                'language.required' => 'Il linguaggio usato è obbligatorio',
                 'type_id.exists' => 'Tipo non valido'
             ]
         );
@@ -104,7 +102,6 @@ class ProjectController extends Controller
         $request->validate(
             [
                 'title' => ['required', 'string', 'min:5', 'max:50', Rule::unique('projects')->ignore($project->id)],
-                'language' => 'required|string',
                 'framework' => 'nullable|string',
                 'image' => 'nullable|image|mimes:png,jpg,jpeg',
                 'description' => 'nullable|string',
@@ -116,7 +113,6 @@ class ProjectController extends Controller
                 'title.max' => 'Il titolo non può essere più lungo di :max caratteri',
                 'title.unique' => 'Titolo già inserito, riprova con un altro titolo',
                 'image.image' => 'Il file inserito non è un\'immagine',
-                'language.required' => 'Il linguaggio usato è obbligatorio',
                 'type_id.exists' => 'Tipo non valido'
             ]
         );

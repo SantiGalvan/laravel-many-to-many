@@ -23,20 +23,7 @@
                 @enderror
             </div>
         </div>
-        <div class="col-3">
-            <div class="mb-3">
-                <label for="language" class="form-label">Linguaggio</label>
-                <input value="{{old('language', $project->language)}}" type="text" class="form-control @error('language') is-invalid @elseif(old('language', '')) is-valid @enderror" id="language" name="language">
-                @error('language')   
-                    <div class="invalid-feedback">{{$message}}</div>
-                @else
-                    <div class="form-text">
-                        Inserisci il linguaggio del progetto
-                    </div>
-                @enderror
-            </div>
-        </div>
-        <div class="col-3">
+        <div class="col-6">
             <div class="mb-3">
                 <label for="framework" class="form-label">Tecnologia Usata</label>
                 <input value="{{old('framework', $project->framework)}}" type="text" class="form-control @error('framework') is-invalid @elseif(old('framework', '')) is-valid @enderror" id="framework" name="framework">
