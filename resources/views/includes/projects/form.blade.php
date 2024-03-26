@@ -68,6 +68,17 @@
                 <img src="{{old('image', $project->image) ? asset('storage/'. $project->image) : 'https://marcolanci.it/boolean/assets/placeholder.png'}}" alt="immagine del progetto" class="img-fluid" id="preview">
             </div>
         </div>
+        <div class="col-12 text-center">
+            <div class="mb-3">
+                <p class="h6 my-3">Linguaggio usato</p>
+                @foreach ($technologies as $technology)
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="technology-{{$technology->id}}" value="{{$technology->id}}" name="technologies[]" @if (in_array($technology->id, old('technologies', []))) checked @endif>
+                        <label class="form-check-label" for="technology-{{$technology->id}}">{{$technology->label}}</label>
+                    </div>
+                @endforeach
+            </div>
+        </div>
         <div class="col-12">
             <div class="mb-3">
                 <label for="description" class="form-label">Descrizione progetto</label>
