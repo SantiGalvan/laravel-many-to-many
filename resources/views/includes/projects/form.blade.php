@@ -73,7 +73,7 @@
                 <p class="my-3">Seleziona i linguaggi usati nel progetto</p>
                 @foreach ($technologies as $technology)
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="technology-{{$technology->id}}" value="{{$technology->id}}" name="technologies[]" @if (in_array($technology->id, old('technologies', []))) checked @endif>
+                        <input class="form-check-input" type="checkbox" id="technology-{{$technology->id}}" value="{{$technology->id}}" name="technologies[]" @if (in_array($technology->id, old('technologies', $prev_technologies ?? []))) checked @endif>
                         <label class="form-check-label" for="technology-{{$technology->id}}">{{$technology->label}}</label>
                     </div>
                 @endforeach
