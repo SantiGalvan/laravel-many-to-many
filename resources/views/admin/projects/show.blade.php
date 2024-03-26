@@ -10,14 +10,21 @@
                 <div class="col-3">
                     <img src="{{asset('storage/'. $project->image)}}" alt="{{$project->title}}" class="img-fluid mb-3">
                     <div><strong>Framework:</strong> {{$project->framework}}</div>
-                    <div class="mt-2"><strong>Creato il:</strong> {{$project->created_at}}</div>
+                    <div class="mt-4"><strong>Creato il:</strong> {{$project->created_at}}</div>
                     <div><strong>Ultima modifica:</strong> {{$project->updated_at}}</div>
                     <div><strong>Tipo:</strong>
                         @if ($project->type)
                         <span class="badge" style="background-color: {{$project->type->color}}">{{$project->type->label}}</span>
                         @else
-                            Nessuno
+                        Nessuno
                         @endif 
+                    </div>
+                    <div class="mt-4"><strong>Linguaggio: </strong>
+                        @forelse ($project->technologies as $technology)
+                            <span class="badge rounded-pill" style="background-color: {{$technology->color}}">{{$technology->label}}</span>
+                        @empty
+                            Nessuno
+                        @endforelse
                     </div>
                 </div>
                 <div class="col">

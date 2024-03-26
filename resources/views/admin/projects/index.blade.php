@@ -20,6 +20,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Titolo</th>
                 <th scope="col">Tipo</th>
+                <th scope="col">Linguaggio</th>
                 <th scope="col">Framework</th>
                 <th scope="col">Creato il</th>
                 <th scope="col">Ultima modifica</th>
@@ -37,6 +38,13 @@
                       @else
                         Nessuno
                       @endif
+                    </td>
+                    <td>
+                      @forelse ($project->technologies as $technology)
+                        <span class="badge rounded-pill" style="background-color: {{$technology->color}}">{{$technology->label}}</span>
+                      @empty
+                        Nessuno
+                      @endforelse
                     </td>
                     <td>{{$project->framework}}</td>
                     <td>{{$project->getFormattedDate('created_at', 'd-m-Y H:i:s ')}}</td>
