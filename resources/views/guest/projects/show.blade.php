@@ -19,6 +19,13 @@
                             Nessuno
                         @endif 
                     </div>
+                    <div class="mt-4"><strong>Linguaggio: </strong>
+                        @forelse ($project->technologies as $technology)
+                            <span class="badge rounded-pill" style="background-color: {{$technology->color}}">{{$technology->label}}</span>
+                        @empty
+                            Nessuno
+                        @endforelse
+                    </div>
                 </div>
                 <div class="col">
                     <h3>{{$project->title}}</h3>
