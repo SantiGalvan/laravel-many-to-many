@@ -179,6 +179,7 @@ class ProjectController extends Controller
         $project = Project::onlyTrashed()->findOrFail($id);
 
         if ($project->image) Storage::delete($project->image);
+        if ($project->has('technologies')) $project->technologies()->detach();
 
         $project->forceDelete();
 
