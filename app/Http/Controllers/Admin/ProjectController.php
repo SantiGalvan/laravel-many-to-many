@@ -30,7 +30,7 @@ class ProjectController extends Controller
     {
         $project = new Project();
         $types = Type::select('label', 'id')->get();
-        $technologies = Technology::select('label', 'id');
+        $technologies = Technology::select('label', 'id')->get();
 
         return view('admin.projects.create', compact('project', 'types', 'technologies'));
     }
