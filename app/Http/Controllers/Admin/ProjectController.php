@@ -47,7 +47,8 @@ class ProjectController extends Controller
                 'framework' => 'nullable|string',
                 'image' => 'nullable|image|mimes:png,jpg,jpeg',
                 'description' => 'nullable|string',
-                'type_id' => 'nullable|exists:types,id'
+                'type_id' => 'nullable|exists:types,id',
+                'technologies' => 'nullable|exists:technologies,id'
             ],
             [
                 'title.required' => 'Il titolo è obbligatorio',
@@ -55,7 +56,8 @@ class ProjectController extends Controller
                 'title.max' => 'Il titolo non può essere più lungo di :max caratteri',
                 'title.unique' => 'Titolo già inserito, riprova con un altro titolo',
                 'image.image' => 'Il file inserito non è un\'immagine',
-                'type_id.exists' => 'Tipo non valido'
+                'type_id.exists' => 'Tipo non valido',
+                'technologies.exists' => 'Linguaggio non valido'
             ]
         );
 
@@ -107,7 +109,8 @@ class ProjectController extends Controller
                 'framework' => 'nullable|string',
                 'image' => 'nullable|image|mimes:png,jpg,jpeg',
                 'description' => 'nullable|string',
-                'type_id' => 'nullable|exists:types,id'
+                'type_id' => 'nullable|exists:types,id',
+                'technologies' => 'nullable|exists:technologies,id'
             ],
             [
                 'title.required' => 'Il titolo è obbligatorio',
@@ -115,7 +118,8 @@ class ProjectController extends Controller
                 'title.max' => 'Il titolo non può essere più lungo di :max caratteri',
                 'title.unique' => 'Titolo già inserito, riprova con un altro titolo',
                 'image.image' => 'Il file inserito non è un\'immagine',
-                'type_id.exists' => 'Tipo non valido'
+                'type_id.exists' => 'Tipo non valido',
+                'technologies.exists' => 'Linguaggio non valido'
             ]
         );
 
