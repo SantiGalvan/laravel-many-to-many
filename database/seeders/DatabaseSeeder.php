@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // Dobbiamo prima creare i tipi
-        $this->call(TypeSeeder::class);
+        $this->call([TypeSeeder::class, TechnologySeeder::class]);
 
         \App\Models\Project::factory(30)->create();
     }
