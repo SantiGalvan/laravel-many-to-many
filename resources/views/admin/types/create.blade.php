@@ -6,7 +6,7 @@
     <section id="create-type">
         <div class="d-flex align-items-center justify-content-between">
             <a href="{{route('admin.types.index')}}" class="btn btn-secondary"><i class="fas fa-arrow-left me-2"></i>Torna alla lista</a>
-            <h1 class="my-4">Crea Tipo</h1>
+            <h1 class="my-4">Crea Tipologia</h1>
         </div>
 
         <form action="{{route('admin.types.store')}}" method="POST">
@@ -20,7 +20,7 @@
                             <div class="invalid-feedback">{{$message}}</div>
                         @else
                             <div class="form-text">
-                                Inserisci il nome del tipo
+                                Inserisci il nome della tipologia
                             </div>
                         @enderror
                     </div>
@@ -46,7 +46,7 @@
                             <div class="invalid-feedback">{{$message}}</div>
                         @else
                             <div class="form-text">
-                                Inserisci una descrizione del tipo
+                                Inserisci una descrizione della tipologia
                             </div>
                         @enderror
                     </div>

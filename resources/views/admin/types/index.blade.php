@@ -6,9 +6,9 @@
     <section id="table-types">
       <div class="d-flex align-items-center justify-content-between">
 
-        <a href="{{route('admin.types.create')}}" class="btn btn-secondary"><i class="fas fa-plus me-2"></i>Crea Tipo</a>
+        <a href="{{route('admin.types.create')}}" class="btn btn-secondary"><i class="fas fa-plus me-2"></i>Crea Tipologia</a>
 
-        <h1 class="my-4">Tipi</h1>
+        <h1 class="my-4">Tipologie</h1>
 
         <a href="{{route('admin.types.trash')}}" class="btn btn-danger"><i class="fas fa-trash me-2"></i>Vai al cestino</a>
 
