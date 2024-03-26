@@ -63,7 +63,7 @@
                   </tr>
                 @empty
                   <tr>
-                    <th colspan="7">
+                    <th colspan="8">
                         <h3>Al momento non ci sono progetti</h3>
                     </th>
                 </tr>  
